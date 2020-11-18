@@ -197,6 +197,10 @@ msgstr "Message with description"
 msgid "withComments"
 msgstr "Support translator comments separately"
 
+msgctxt "Support context"
+msgid "withContext"
+msgstr "Support translator context separately"
+
 #~ msgid "obsolete"
 #~ msgstr "Obsolete message"
 

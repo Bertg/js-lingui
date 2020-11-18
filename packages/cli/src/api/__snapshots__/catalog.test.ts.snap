@@ -44,6 +44,28 @@ Object {
       ],
     ],
   },
+  Hello WorldContext A: Object {
+    context: Context A,
+    extractedComments: Array [],
+    id: Hello World,
+    origin: Array [
+      Array [
+        collect/componentA/index.js,
+        2,
+      ],
+    ],
+  },
+  Hello WorldContext B: Object {
+    context: Context B,
+    extractedComments: Array [],
+    id: Hello World,
+    origin: Array [
+      Array [
+        collect/componentA/index.js,
+        3,
+      ],
+    ],
+  },
 }
 `;
 
@@ -101,6 +123,36 @@ Object {
       ],
       translation: ,
     },
+    Hello WorldContext A: Object {
+      comments: Array [],
+      context: Context A,
+      extractedComments: Array [],
+      flags: Array [],
+      id: Hello World,
+      obsolete: false,
+      origin: Array [
+        Array [
+          collect/componentA/index.js,
+          2,
+        ],
+      ],
+      translation: ,
+    },
+    Hello WorldContext B: Object {
+      comments: Array [],
+      context: Context B,
+      extractedComments: Array [],
+      flags: Array [],
+      id: Hello World,
+      obsolete: false,
+      origin: Array [
+        Array [
+          collect/componentA/index.js,
+          3,
+        ],
+      ],
+      translation: ,
+    },
   },
   en: Object {
     Component A: Object {
@@ -141,6 +193,36 @@ Object {
         Array [
           collect/componentA/index.js,
           1,
+        ],
+      ],
+      translation: ,
+    },
+    Hello WorldContext A: Object {
+      comments: Array [],
+      context: Context A,
+      extractedComments: Array [],
+      flags: Array [],
+      id: Hello World,
+      obsolete: false,
+      origin: Array [
+        Array [
+          collect/componentA/index.js,
+          2,
+        ],
+      ],
+      translation: ,
+    },
+    Hello WorldContext B: Object {
+      comments: Array [],
+      context: Context B,
+      extractedComments: Array [],
+      flags: Array [],
+      id: Hello World,
+      obsolete: false,
+      origin: Array [
+        Array [
+          collect/componentA/index.js,
+          3,
         ],
       ],
       translation: ,
@@ -238,6 +320,36 @@ Object {
       ],
       translation: Ahoj Brno,
     },
+    Hello WorldContext A: Object {
+      comments: Array [],
+      context: Context A,
+      extractedComments: Array [],
+      flags: Array [],
+      id: Hello World,
+      obsolete: false,
+      origin: Array [
+        Array [
+          collect/componentA/index.js,
+          2,
+        ],
+      ],
+      translation: ,
+    },
+    Hello WorldContext B: Object {
+      comments: Array [],
+      context: Context B,
+      extractedComments: Array [],
+      flags: Array [],
+      id: Hello World,
+      obsolete: false,
+      origin: Array [
+        Array [
+          collect/componentA/index.js,
+          3,
+        ],
+      ],
+      translation: ,
+    },
   },
   en: Object {
     Component A: Object {
@@ -297,6 +409,36 @@ Object {
       ],
       translation: Ahoj Brno,
     },
+    Hello WorldContext A: Object {
+      comments: Array [],
+      context: Context A,
+      extractedComments: Array [],
+      flags: Array [],
+      id: Hello World,
+      obsolete: false,
+      origin: Array [
+        Array [
+          collect/componentA/index.js,
+          2,
+        ],
+      ],
+      translation: ,
+    },
+    Hello WorldContext B: Object {
+      comments: Array [],
+      context: Context B,
+      extractedComments: Array [],
+      flags: Array [],
+      id: Hello World,
+      obsolete: false,
+      origin: Array [
+        Array [
+          collect/componentA/index.js,
+          3,
+        ],
+      ],
+      translation: ,
+    },
   },
 }
 `;
@@ -354,6 +496,36 @@ Object {
       ],
       translation: ,
     },
+    Hello WorldContext A: Object {
+      comments: Array [],
+      context: Context A,
+      extractedComments: Array [],
+      flags: Array [],
+      id: Hello World,
+      obsolete: false,
+      origin: Array [
+        Array [
+          collect/componentA/index.js,
+          2,
+        ],
+      ],
+      translation: ,
+    },
+    Hello WorldContext B: Object {
+      comments: Array [],
+      context: Context B,
+      extractedComments: Array [],
+      flags: Array [],
+      id: Hello World,
+      obsolete: false,
+      origin: Array [
+        Array [
+          collect/componentA/index.js,
+          3,
+        ],
+      ],
+      translation: ,
+    },
   },
 }
 `;
@@ -400,6 +572,36 @@ Object {
       Array [
         collect/componentA/index.js,
         1,
+      ],
+    ],
+    translation: ,
+  },
+  Hello WorldContext A: Object {
+    comments: Array [],
+    context: Context A,
+    extractedComments: Array [],
+    flags: Array [],
+    id: Hello World,
+    obsolete: false,
+    origin: Array [
+      Array [
+        collect/componentA/index.js,
+        2,
+      ],
+    ],
+    translation: ,
+  },
+  Hello WorldContext B: Object {
+    comments: Array [],
+    context: Context B,
+    extractedComments: Array [],
+    flags: Array [],
+    id: Hello World,
+    obsolete: false,
+    origin: Array [
+      Array [
+        collect/componentA/index.js,
+        3,
       ],
     ],
     translation: ,

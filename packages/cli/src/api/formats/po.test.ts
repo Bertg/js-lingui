@@ -51,6 +51,11 @@ describe("pofile format", function () {
         comments: ["Translator comment", "This one might come from developer"],
         translation: "Support translator comments separately",
       },
+      withContext: {
+        id: "withContext",
+        context: "Support context",
+        translation: "Support translator context separately",
+      },
       obsolete: {
         id: "obsolete",
         translation: "Obsolete message",
