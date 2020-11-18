@@ -164,6 +164,22 @@ describe("I18n", function () {
     expect(i18n._(hello)).toEqual("Salut")
   })
 
+  it("._ should translate context aware", function () {
+    const messages = {
+      Hello: "Salut",
+      ["Hello\u001FWith Smiles"]: "Salut :)",
+    }
+
+    const i18n = setupI18n({
+      locale: "fr",
+      messages: { fr: messages },
+    })
+    expect(i18n._({id: "Hello"})).toEqual("Salut")
+    expect(i18n._("Hello")).toEqual("Salut")
+    expect(i18n._("Hello", {}, {context: "With Smiles"})).toEqual("Salut :)")
+    expect(i18n._({id: "Hello", context: "With Smiles"})).toEqual("Salut :)")
+  })
+
   it("._ allow escaping syntax characters", () => {
     const messages = {
       "My ''name'' is '{name}'": "Mi ''nombre'' es '{name}'",

@@ -6,6 +6,7 @@ import { EventEmitter } from "./eventEmitter"
 
 export type MessageOptions = {
   message?: string
+  context?: string
   formats?: Object
 }
 
@@ -32,6 +33,7 @@ export type MessageDescriptor = {
   id?: string
   comment?: string
   message?: string
+  context?: string
   values?: Record<string, unknown>
 }
 
@@ -160,20 +162,28 @@ export class I18n extends EventEmitter<Events> {
   _(
     id: MessageDescriptor | string,
     values: Object | undefined = {},
-    { message, formats }: MessageOptions | undefined = {}
+    { message, formats, context }: MessageOptions | undefined = {}
   ) {
+
     if (!isString(id)) {
       values = id.values || values
       message = id.message
+      context = id.context
       id = id.id
     }
-    let translation = this.messages[id] || message || id
+
+    const lookupKey = context ? `${id}\u001F${context}` : id
+
+    // Lookup, here ctx must be considered
+    let translation = this.messages[lookupKey]
 
     // replace missing messages with custom message for debugging
     const missing = this._missing
-    if (missing && !this.messages[id]) {
+    if (missing && !translation) {
       return isFunction(missing) ? missing(this.locale, id) : missing
     }
+
+    translation = translation || message || id
 
     if (process.env.NODE_ENV !== "production") {
       translation = isString(translation)
