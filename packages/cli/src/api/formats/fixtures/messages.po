@@ -43,3 +43,7 @@ msgstr "One morning, when Gregor Samsa woke from troubled dreams, he found himse
 #, fuzzy,otherFlag
 msgid "withFlags"
 msgstr "Keeps any flags that are defined"
+
+msgctxt "Support context"
+msgid "withContext"
+msgstr "Support translator context separately"

@@ -21,7 +21,8 @@ const serialize = (items: CatalogType, options) =>
     R.values,
     R.mapObjIndexed((message: MessageType, key) => {
       const item = new PO.Item()
-      item.msgid = key
+      item.msgid = message.id,
+      item.msgctxt = message.context,
       item.msgstr = [message.translation]
       item.comments = message.comments || []
       item.extractedComments = message.extractedComments || []
@@ -37,8 +38,14 @@ const serialize = (items: CatalogType, options) =>
     })
   )(items)
 
-const getMessageKey = R.prop<"msgid", string>("msgid")
+const getMessageKey = R.compose<"msgid", string>(
+  R.join('\u001F'),
+  R.reject(R.either(R.isEmpty, R.isNil)),
+  R.props(["msgid", "msgctxt"])
+)
+const getId = R.prop<"msgid", string>("msgid")
 const getTranslations = R.prop("msgstr")
+const getContext = R.prop("msgctxt")
 const getExtractedComments = R.prop("extractedComments")
 const getTranslatorComments = R.prop("comments")
 const getOrigins = R.prop("references")
@@ -52,6 +59,8 @@ const isObsolete = R.either(R.path(["flags", "obsolete"]), R.prop("obsolete"))
 
 const deserialize: (item: Object) => Object = R.map(
   R.applySpec({
+    id: getId,
+    context: getContext,
     translation: R.compose(R.head, R.defaultTo([]), getTranslations),
     extractedComments: R.compose(R.defaultTo([]), getExtractedComments),
     comments: R.compose(R.defaultTo([]), getTranslatorComments),

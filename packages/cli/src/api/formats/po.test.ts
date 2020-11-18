@@ -25,13 +25,16 @@ describe("pofile format", function () {
     const filename = path.join("locale", "en", "messages.po")
     const catalog: CatalogType = {
       static: {
+        id: "static",
         translation: "Static message",
       },
       withOrigin: {
+        id: "withOrigin",
         translation: "Message with origin",
         origin: [["src/App.js", 4]],
       },
       withMultipleOrigins: {
+        id: "withMultipleOrigins",
         translation: "Message with multiple origin",
         origin: [
           ["src/App.js", 4],
@@ -39,22 +42,27 @@ describe("pofile format", function () {
         ],
       },
       withDescription: {
+        id: "withDescription",
         translation: "Message with description",
         extractedComments: ["Description is comment from developers to translators"],
       },
       withComments: {
+        id: "withComments",
         comments: ["Translator comment", "This one might come from developer"],
         translation: "Support translator comments separately",
       },
       obsolete: {
+        id: "obsolete",
         translation: "Obsolete message",
         obsolete: true,
       },
       withFlags: {
+        id: "withFlags",
         flags: ["fuzzy", "otherFlag"],
         translation: "Keeps any flags that are defined",
       },
       veryLongString: {
+        id: "veryLongString",
         translation:
           "One morning, when Gregor Samsa woke from troubled dreams, he found himself" +
           " transformed in his bed into a horrible vermin. He lay on his armour-like" +

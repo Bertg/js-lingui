@@ -4,6 +4,7 @@ exports[`Catalog collect should extract messages from source files 1`] = `
 Object {
   Component A: Object {
     extractedComments: Array [],
+    id: Component A,
     origin: Array [
       Array [
         collect/componentA/componentA.js,
@@ -13,6 +14,7 @@ Object {
   },
   Component B: Object {
     extractedComments: Array [],
+    id: Component B,
     origin: Array [
       Array [
         collect/componentB.js,
@@ -26,6 +28,7 @@ Object {
       Comment A again,
       Hello comment,
     ],
+    id: Hello World,
     origin: Array [
       Array [
         collect/componentA/componentA.js,
@@ -58,8 +61,10 @@ Object {
   cs: Object {
     Component A: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [],
       flags: Array [],
+      id: Component A,
       obsolete: false,
       origin: Array [
         Array [
@@ -71,12 +76,14 @@ Object {
     },
     Hello World: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [
         Comment A,
         Comment A again,
         Hello comment,
       ],
       flags: Array [],
+      id: Hello World,
       obsolete: false,
       origin: Array [
         Array [
@@ -98,8 +105,10 @@ Object {
   en: Object {
     Component A: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [],
       flags: Array [],
+      id: Component A,
       obsolete: false,
       origin: Array [
         Array [
@@ -111,12 +120,14 @@ Object {
     },
     Hello World: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [
         Comment A,
         Comment A again,
         Hello comment,
       ],
       flags: Array [],
+      id: Hello World,
       obsolete: false,
       origin: Array [
         Array [
@@ -143,8 +154,10 @@ Object {
   cs: Object {
     Hello World: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [],
       flags: Array [],
+      id: Hello World,
       obsolete: false,
       origin: Array [],
       translation: Ahoj Brno,
@@ -153,8 +166,10 @@ Object {
   en: Object {
     Hello World: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [],
       flags: Array [],
+      id: Hello World,
       obsolete: false,
       origin: Array [],
       translation: Ahoj Brno,
@@ -168,8 +183,10 @@ Object {
   cs: Object {
     Component A: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [],
       flags: Array [],
+      id: Component A,
       obsolete: false,
       origin: Array [
         Array [
@@ -181,8 +198,10 @@ Object {
     },
     Component B: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [],
       flags: Array [],
+      id: Component B,
       obsolete: false,
       origin: Array [
         Array [
@@ -194,12 +213,14 @@ Object {
     },
     Hello World: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [
         Comment A,
         Comment A again,
         Hello comment,
       ],
       flags: Array [],
+      id: Hello World,
       obsolete: false,
       origin: Array [
         Array [
@@ -221,8 +242,10 @@ Object {
   en: Object {
     Component A: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [],
       flags: Array [],
+      id: Component A,
       obsolete: false,
       origin: Array [
         Array [
@@ -234,8 +257,10 @@ Object {
     },
     Component B: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [],
       flags: Array [],
+      id: Component B,
       obsolete: false,
       origin: Array [
         Array [
@@ -247,12 +272,14 @@ Object {
     },
     Hello World: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [
         Comment A,
         Comment A again,
         Hello comment,
       ],
       flags: Array [],
+      id: Hello World,
       obsolete: false,
       origin: Array [
         Array [
@@ -287,8 +314,10 @@ Object {
   en: Object {
     Component A: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [],
       flags: Array [],
+      id: Component A,
       obsolete: false,
       origin: Array [
         Array [
@@ -300,12 +329,14 @@ Object {
     },
     Hello World: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [
         Comment A,
         Comment A again,
         Hello comment,
       ],
       flags: Array [],
+      id: Hello World,
       obsolete: false,
       origin: Array [
         Array [
@@ -333,8 +364,10 @@ exports[`Catalog makeTemplate should collect and write a template 2`] = `
 Object {
   Component A: Object {
     comments: Array [],
+    context: null,
     extractedComments: Array [],
     flags: Array [],
+    id: Component A,
     obsolete: false,
     origin: Array [
       Array [
@@ -346,12 +379,14 @@ Object {
   },
   Hello World: Object {
     comments: Array [],
+    context: null,
     extractedComments: Array [
       Comment A,
       Comment A again,
       Hello comment,
     ],
     flags: Array [],
+    id: Hello World,
     obsolete: false,
     origin: Array [
       Array [
@@ -376,24 +411,30 @@ exports[`Catalog read should read file in given format 1`] = `
 Object {
   obsolete: Object {
     comments: Array [],
+    context: null,
     extractedComments: Array [],
     flags: Array [],
+    id: obsolete,
     obsolete: true,
     origin: Array [],
     translation: Is marked as obsolete,
   },
   static: Object {
     comments: Array [],
+    context: null,
     extractedComments: Array [],
     flags: Array [],
+    id: static,
     obsolete: false,
     origin: Array [],
     translation: Static message,
   },
   veryLongString: Object {
     comments: Array [],
+    context: null,
     extractedComments: Array [],
     flags: Array [],
+    id: veryLongString,
     obsolete: false,
     origin: Array [],
     translation: One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human,
@@ -403,37 +444,55 @@ Object {
       Translator comment,
       This one might come from developer,
     ],
+    context: null,
     extractedComments: Array [],
     flags: Array [],
+    id: withComments,
     obsolete: false,
     origin: Array [],
     translation: Support translator comments separately,
   },
+  withContextSupport context: Object {
+    comments: Array [],
+    context: Support context,
+    extractedComments: Array [],
+    flags: Array [],
+    id: withContext,
+    obsolete: false,
+    origin: Array [],
+    translation: Support translator context separately,
+  },
   withDescription: Object {
     comments: Array [],
+    context: null,
     extractedComments: Array [
       Description is comment from developers to translators,
     ],
     flags: Array [],
+    id: withDescription,
     obsolete: false,
     origin: Array [],
     translation: Message with description,
   },
   withFlags: Object {
     comments: Array [],
+    context: null,
     extractedComments: Array [],
     flags: Array [
       fuzzy,
       otherFlag,
     ],
+    id: withFlags,
     obsolete: false,
     origin: Array [],
     translation: Keeps any flags that are defined,
   },
   withMultipleOrigins: Object {
     comments: Array [],
+    context: null,
     extractedComments: Array [],
     flags: Array [],
+    id: withMultipleOrigins,
     obsolete: false,
     origin: Array [
       Array [
@@ -449,8 +508,10 @@ Object {
   },
   withOrigin: Object {
     comments: Array [],
+    context: null,
     extractedComments: Array [],
     flags: Array [],
+    id: withOrigin,
     obsolete: false,
     origin: Array [
       Array [
@@ -470,8 +531,10 @@ Object {
   cs: Object {
     Hello World: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [],
       flags: Array [],
+      id: Hello World,
       obsolete: false,
       origin: Array [],
       translation: Ahoj Brno,
@@ -480,8 +543,10 @@ Object {
   en: Object {
     Hello World: Object {
       comments: Array [],
+      context: null,
       extractedComments: Array [],
       flags: Array [],
+      id: Hello World,
       obsolete: false,
       origin: Array [],
       translation: Hello World,

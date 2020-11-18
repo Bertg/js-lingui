@@ -17,10 +17,13 @@ const VISITED = Symbol("I18nVisited")
 function addMessage(
   path,
   messages,
-  { id, message: newDefault, origin, comment, ...props }
+  { id, message: newDefault, origin, comment, context, ...props }
 ) {
-  if (messages.has(id)) {
-    const message = messages.get(id)
+
+  const uniqId = context ? `${id}\u001F${context}` : id;
+
+  if (messages.has(uniqId)) {
+    const message = messages.get(uniqId)
 
     // only set/check default language when it's defined.
     if (message.message && newDefault && message.message !== newDefault) {
@@ -39,7 +42,7 @@ function addMessage(
     }
   } else {
     const extractedComments = comment ? [comment] : []
-    messages.set(id, { ...props, message: newDefault, origin, extractedComments })
+    messages.set(uniqId, { ...props, id, context, message: newDefault, origin, extractedComments })
   }
 }
 
@@ -114,7 +117,7 @@ export default function ({ types: t }) {
 
         const props = attrs.reduce((acc, item) => {
           const key = item.name.name
-          if (key === "id" || key === "message" || key === "comment") {
+          if (["id", "message", "comment", "context"].includes(key)) {
             if (item.value.value) {
               acc[key] = item.value.value
             } else if (
@@ -160,7 +163,7 @@ export default function ({ types: t }) {
           id: path.node.arguments[0].value,
         }
 
-        const copyOptions = ["message", "comment"]
+        const copyOptions = ["message", "comment", "context"]
 
         if (t.isObjectExpression(path.node.arguments[2])) {
           path.node.arguments[2].properties.forEach((property) => {
@@ -213,7 +216,7 @@ export default function ({ types: t }) {
         visited.add(path.node)
 
         const props = {}
-        const copyProps = ["id", "message", "comment"]
+        const copyProps = ["id", "message", "comment", "context"]
         path.node.properties
           .filter(({ key }) => copyProps.indexOf(key.name) !== -1)
           .forEach(({ key, value }, i) => {

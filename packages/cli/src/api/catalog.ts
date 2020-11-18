@@ -23,7 +23,9 @@ const PATHSEP = "/" // force posix everywhere
 type MessageOrigin = [string, number];
 
 export type ExtractedMessageType = {
-  message?: string
+  id: string,
+  context?: string,
+  message?: string,
   origin?: MessageOrigin[]
   extractedComments?: string[]
   comments?: string[]

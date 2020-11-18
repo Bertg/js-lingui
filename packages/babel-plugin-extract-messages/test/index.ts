@@ -134,4 +134,9 @@ describe("@lingui/babel-plugin-extract-messages", function () {
     "should extract all messages from JS files (macros)",
     "js-with-macros.js"
   )
+
+  testCase(
+    "should extract uniq translations based on context",
+    "context.js"
+  )
 })
